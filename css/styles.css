@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 25px;
+  
+}
+
+.menu {
+  background-color: #8e8e8e;
+  border: 2px solid black;
+}
+
+.menu p {
+  margin: 10px;
+  margin-top: 50px;
+  text-align: justify;
+  clear: both;
+}
+
+.name {
+  width: 40%;
+  float: right;
+  border:  solid black;
+  border-width: 0px 0px 2px 2px;
+  text-align: center;
+  font-size: 150%;
+  padding-bottom: 5px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 40px 25px;
+}
+
+#chicken {
+  background-color: #cf8d8d;
+}
+#beef {
+  background-color: #b93c3b;
+  color: white;
+}
+#sushi {
+  background-color: #e1ca8d;
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: column;
+  }
+}
